@@ -51,9 +51,7 @@ Supervisor View
 * The application will provide a list of menu options
 	View Product Sales by Department - display a summarized table in their terminal/bash window
 
-	department_id	department_name		over_head_costs		product_sales	total_profit
-	01				Electronics			10000				20000			10000
-	02				Clothing			60000				100000			40000
+	[screenshot] https://github.com/aguirremra/Bamazon/blob/master/prodsalesdept.png
 
 	* Create New Department - add a completely new department
 	* Exit - quit the application
