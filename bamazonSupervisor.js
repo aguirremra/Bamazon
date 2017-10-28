@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 
   user: "root",
 
-  password: "Mras*9969",
+  password: "",
   database: "bamazonDB"
 });
 
@@ -57,7 +57,7 @@ function lower(choice){
 function viewProductSalesByDepartment(){
 	console.log("\nDisplaying All Products For Sale\n");
   connection.query("SELECT d.department_id, d.department_name, d.over_head_costs," + 
-  								 "sum(p.product_sales), sum(p.product_sales)-d.over_head_costs AS total_profit FROM departments d " +
+  								 "sum(p.product_sales) AS total_sales, sum(p.product_sales)-d.over_head_costs AS total_profit FROM departments d " +
   								 "LEFT JOIN products p ON d.department_id = p.department_id " + 
   								 "GROUP BY d.department_id, d.department_name" , function(err, res) {
     if (err) throw err;
